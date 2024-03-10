@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); /* url de fonts.google primero se selecciona y se copia link */
+
+* {
+  margin: 0px; /* margen 0 para la página */
+  padding: 0px; /* relleno 0 para la página */
+  box-sizing: border-box; /* tamaño de caja se incluye padding y border */
+}
+
+body {
+  min-height: 100vh; /* alto mínimo posible (min-height) de 100% en función del viewport vertical (100vh) */
+  font-family: "Roboto", sans-serif; /* de fonts */
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ESTILO PARA CELULAR EXTRA SMALL <576PX */
+.grid-container {
+  display: grid; /* para alinear el contendio */
+  grid-template-columns: 1fr; /* una columna */
+  grid-template-rows: auto auto auto auto; /* cuatro filas */
+  grid-template-areas:/* a que parte del layout corresponde cada nombre */
+    "nav"
+    "buscar"
+    "contenido"
+    "footer";
+}
+
+/* ESTILO NAV */
+nav {
+  grid-area: nav; /* nombre por area */
+  background-color: blue; /* color de fondo */
+  display: flex; /* alinear contenido uno  al lado de otro */
+  flex-direction: column; /* dirección column */
+  justify-content: flex-start; /* alinear al inicio  por defecto eje horizontal principal */
+  align-items: center; /* alinear centrado items por defecto eje vertical secundario transversal  */
+  padding: 5px; /* relleno */
+}
+
+.inicio {
+  display: flex; /* alinear contenido uno  al lado de otro */
+  justify-content: center; /* alinear al centro por defecto eje horizontal principal */
+  align-items: center; /* alinear centrado items por defecto eje vertical secundario transversal  */
+  color: white; /* color letra */
+  gap: 200px; /* separación entre filas y columnas */
+}
+
+.cam {
+  display: flex; /* alinear contenido uno  al lado de otro */
+  justify-content: center; /* alinear al centro por defecto eje horizontal principal */
+  align-items: center; /* alinear centrado items por defecto eje vertical secundario transversal  */
+  padding-top: 20px; /* relleno arriba */
+  padding-bottom: 12px; /* relleno abajo */
+  gap: 8px; /* separación entre filas y columnas */
+}
+
+.cam p {
+  font-size: 14px; /* tamaño de la letra */
+}
+
+.cam i {
+  font-size: 18px; /* tamaño de la letra */
+}
+
+.bar i {
+  font-size: 25px; /* tamaño de la letra */
+}
+
+.listado {
+  display: none; /* esconder */
+}
+
+.listado p {
+  color: white; /* color letra */
+  font-size: 14px; /* tamaño de la letra */
+  padding-top: 10px; /* relleno arriba */
+}
+
+/* ESTILO BUSCAR */
+.buscar {
+  grid-area: buscar; /* nombre por area */
+  background-color: rgb(227, 226, 226); /* color de fondo */
+  color: black; /* color letra */
+  padding-top: 4px; /* relleno arriba */
+  padding-bottom: 8px; /* relleno abajo */
+  font-size: 14px; /* tamaño de la letra */
+  display: flex; /* alinear contenido uno  al lado de otro */
+  flex-direction: column; /* dirección column */
+  justify-content: center; /* alinear al inicio  por defecto eje horizontal principal */
+  align-items: center; /* alinear centrado items por defecto eje vertical secundario transversal  */
+}
+
+.orden {
+  padding-bottom: 5px; /* relleno abajo */
+  padding-top: 7px; /* relleno arriba */
+}
+
+.orden p {
+  font-size: 14px; /* tamaño letra */
+}
+
+select {
+  width: 90%; /* ancho */
+  height: 30px; /* alto */
+  border-radius: 5px; /* borde circular */
+}
+
+/* ESTILO CONTENIDO */
+.contenido {
+  grid-area: contenido; /* nombre por area */
+  background-color: white; /* color de fondo */
+  padding: 20px; /* relleno */
+}
+
+.productos {
+  display: grid; /* para alinear el contendio */
+  grid-template-columns: 1fr; /* una columna */
+  gap: 20px; /* separación entre filas y columnas */
+  padding-top: 5px; /* relleno arriba */
+  padding-left: 7px; /* relleno izquierdo */
+  padding-right: 7px; /* relleno derecho */
+}
+
+.producto {
+  display: flex; /* alinear contenido uno  al lado de otro */
+  flex-direction: column; /* dirección column */
+  justify-content: center; /* alinear al centro por defecto eje horizontal principal */
+  align-items: center; /* alinear centrado items por defecto eje vertical secundario transversal  */
+  background-color: white; /* color de fondo */
+  border: 2px solid; /* borde */
+  border-color: rgb(215, 211, 211); /* color de borde */
+  border-radius: 5px; /* borde circular */
+  padding: 12px; /* relleno */
+  box-shadow: 5px 5px 5px 0 #c2c4c5; /* sombra */
+}
+
+.imagen img {
+  width: 100%; /* ancho */
+  max-width: 600px; /* máximo ancho */
+}
+
+.texto {
+  font-size: 12px; /* tamaño de la letra */
+  padding-bottom: 5px; /* relleno abajo */
+  color: rgb(109, 108, 108); /* color de letra */
+}
+
+.btn1 {
+  width: 100%; /* ancho */
+  background-color: blue; /* color de fondo */
+  color: white; /* color letra */
+  border-radius: 3px; /* borde circular */
+  height: 28px; /* alto */
+  font-size: 10px; /* tamaño de la letra */
+  padding: 7px; /* relleno */
+}
+
+.btn1:hover {
+  background-color: #1995bb; /* color de fondo */
+}
+
+.numeros {
+  display: flex; /* alinear contenido uno  al lado de otro */
+  justify-content: center; /* alinear al centro por defecto eje horizontal principal */
+  align-items: center; /* alinear centrado items por defecto eje vertical secundario transversal  */
+  padding-top: 18px; /* relleno arriba */
+}
+
+.num {
+  border: 1px solid; /* borde */
+  border-color: rgb(207, 202, 202); /* color del borde */
+  border-radius: 3px; /* borde circular */
+}
+
+.numeros i {
+  border-left: 1px solid; /* borde izquierdo */
+  border-color: rgb(175, 173, 173); /* color del borde */
+  background-color: white; /* color de fondo */
+  color: blue; /* color icono */
+  font-size: 10px; /* tamaño */
+  padding: 4px; /* relleno */
+  cursor: pointer; /* mostrar posicion en los numeros */
+}
+
+/* ESTILO PARA EL FOOTER */
+footer {
+  grid-area: footer; /* nombre por area */
+  background-color: rgb(21, 21, 112); /* color de fondo */
+  color: white; /* color letra */
+  display: flex; /* alinear contenido uno  al lado de otro */
+  justify-content: center; /* alinear al centro por defecto eje horizontal principal */
+  align-items: center; /* alinear centrado items por defecto eje vertical secundario transversal  */
+  flex-direction: column; /* dirección column */
+}
+
+footer .rs {
+  display: flex; /* alinear contenido uno  al lado de otro */
+  justify-content: center; /* alinear al centro por defecto eje horizontal principal */
+  align-items: center; /* alinear centrado items por defecto eje vertical secundario transversal  */
+  gap: 7px; /* separación entre filas y columnas */
+}
+
+footer i {
+  padding-top: 20px; /* relleno arriba */
+  font-size: 16px; /* tamaño letra */
+}
+
+footer p {
+  padding-top: 7px; /* relleno arriba */
+  padding-bottom: 20px; /* relleno abajo */
+  font-size: 12px; /* tamaño de la letra */
+}
+
+/* SMALL >=576PX PC DESDE AQUÍ PARA ARRIBA HACE ESTO */
+@media (min-width: 576px) {
+  .grid-container {
+    display: grid; /* para alinear el contendio */
+    grid-template-columns: 15% 85%; /* dos columnas */
+    grid-template-rows: 70px calc(100vh - 70px - 95px) 95px; /* tres filas */
+
+    grid-template-areas:/* a que parte del layout corresponde cada nombre */
+      "nav buscar"
+      "nav contenido"
+      "footer contendio";
+  }
+
+  .bar {
+    display: none; /* ocultar */
+  }
+
+  .listado {
+    display: flex; /* alinear contenido uno  al lado de otro */
+    flex-direction: column; /* dirección column */
+    justify-content: center; /* alinear al centro por defecto eje horizontal principal */
+    align-items: center; /* alinear centrado items por defecto eje vertical secundario transversal  */
+    cursor: pointer; /* mostrar posicion en el listado */
+  }
+
+  .productos {
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* cuatro columnas */
+  }
+
+  .numeros {
+    padding-top: 30px; /* relleno arriba */
+  }
+
+  .foo p {
+    width: 95%; /* ancho */
+    text-align: center; /* texto centrado */
+  }
+}
